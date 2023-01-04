@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Practice-Portfolio
+
+![NextJS Image](https://th.bing.com/th/id/R.b03ee6805e62ba683162c18710dc8611?rik=cQKrthcc2lzF4Q&pid=ImgRaw&r=0&sres=1&sresct=1)
+
+📓 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## TechStack
+
+![NextJs](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![MarkDown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+
+## Table of Contents
+
+- [Practice-Portfolio](#practice-portfolio)
+  - [TechStack](#techstack)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+  - [Learn More](#learn-more)
+  - [Deploy on Vercel](#deploy-on-vercel)
 
 ## Getting Started
 
