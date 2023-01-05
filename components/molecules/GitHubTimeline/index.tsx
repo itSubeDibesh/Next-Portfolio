@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { Button, Card, Timeline } from "flowbite-react";
 import moment from "moment";
+import Link from "next/link";
 import { TAllRepos } from "../../../config";
 
 interface IGitHubTimeline {
@@ -16,8 +17,6 @@ const navigate = (url: string) => {
 };
 
 export const GitHubTimeline = ({ timeline }: IGitHubTimeline) => {
-	console.log(timeline?.length);
-
 	return timeline ? (
 		<>
 			<Card>
@@ -31,7 +30,7 @@ export const GitHubTimeline = ({ timeline }: IGitHubTimeline) => {
 							created_at,
 							description,
 							name,
-							url,
+							fullName,
 							html_url,
 						}) => {
 							return (
@@ -76,18 +75,21 @@ export const GitHubTimeline = ({ timeline }: IGitHubTimeline) => {
 													width={20}
 												/>
 											</Button>
-											<Button
-												color="gray"
-												className="m-2"
-												onClick={() => {}}
+											<Link
+												href={`/blogs/repository/${name}`}
 											>
-												View Details
-												<Icon
-													icon="vscode-icons:folder-type-github-opened"
-													className="ml-2"
-													width={20}
-												/>
-											</Button>
+												<Button
+													color="gray"
+													className="m-2"
+												>
+													View Details
+													<Icon
+														icon="vscode-icons:folder-type-github-opened"
+														className="ml-2"
+														width={20}
+													/>
+												</Button>
+											</Link>
 										</div>
 									</Timeline.Content>
 								</Timeline.Item>

@@ -5,8 +5,6 @@ import { NavBar } from "../../components/organisms";
 import { getAllRepositories } from "../../config";
 
 export default function Blogs({ timeline }: any) {
-	console.log("Here:", timeline);
-
 	return (
 		<>
 			<Head>
