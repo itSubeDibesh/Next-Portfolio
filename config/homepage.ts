@@ -32,7 +32,7 @@ const homepageDetails: IHomepageDetails = {
 	},
 	sourceCode: {
 		title: "Get your hands dirty!",
-		summary: `How did I made it, learn more about project at GitHub. Or get yourself with the source code.`,
+		summary: `How did I made it, learn more about project at GitHub. Or get your hands dirty with source code.`,
 		githubUrl: "https://github.com/itSubeDibesh/Next-Portfolio",
 	},
 	socialLinks: {
