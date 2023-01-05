@@ -2,9 +2,11 @@ import Head from "next/head";
 import { EEmoji } from "../../components/atoms";
 import { GitHubTimeline } from "../../components/molecules";
 import { NavBar } from "../../components/organisms";
-import { getAllRepositories } from "../../config/blogsPage";
+import { getAllRepositories } from "../../config";
 
-export default function Blogs() {
+export default function Blogs({ timeline }: any) {
+	console.log("Here:", timeline);
+
 	return (
 		<>
 			<Head>
@@ -27,7 +29,7 @@ export default function Blogs() {
 							<GitHubTimeline />
 						</div> */}
 						<div>
-							<GitHubTimeline />
+							<GitHubTimeline timeline={timeline} />
 						</div>
 					</div>
 				</div>
@@ -37,13 +39,10 @@ export default function Blogs() {
 }
 
 export const getStaticProps = async () => {
-	//  My Info
-	const githubAPI = await getAllRepositories();
-	// console.log(githubAPI);
-
-	// log(githubAPI);
-
+	const timeline = await getAllRepositories();
 	return {
-		props: {},
+		props: {
+			timeline,
+		},
 	};
 };

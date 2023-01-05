@@ -12,7 +12,7 @@ const AllRepos = z
 	})
 	.array();
 
-type TAllRepos = z.infer<typeof AllRepos>;
+export type TAllRepos = z.infer<typeof AllRepos>;
 
 export const getAllRepositories = async (): Promise<TAllRepos | null> => {
 	try {
