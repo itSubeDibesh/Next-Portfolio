@@ -1,3 +1,10 @@
+export interface ISocialLinks {
+	title: string;
+	icon: string;
+	url: string;
+	isPopular: boolean;
+}
+
 export interface IHomepageDetails {
 	heroCard: {
 		intro: string;
@@ -9,6 +16,11 @@ export interface IHomepageDetails {
 		summary: string;
 		githubUrl: string;
 	};
+	socialLinks: {
+		title: string;
+		summary: string;
+		socialLinks: ISocialLinks[];
+	};
 }
 
 const homepageDetails: IHomepageDetails = {
@@ -19,10 +31,33 @@ const homepageDetails: IHomepageDetails = {
 		imgSrc: "/images/hero.jpg",
 	},
 	sourceCode: {
-		title: "Get your hands dirty",
-		summary: `How did I made it, learn more about project at GitHub
-					Download the source code.`,
+		title: "Get your hands dirty!",
+		summary: `How did I made it, learn more about project at GitHub. Or get yourself with the source code.`,
 		githubUrl: "https://github.com/itSubeDibesh/Next-Portfolio",
+	},
+	socialLinks: {
+		title: "Wanna connect with me?",
+		summary: "Get in touch with me around social medias.",
+		socialLinks: [
+			{
+				isPopular: true,
+				title: "LinkedIn",
+				icon: "logos:linkedin-icon",
+				url: "https://www.linkedin.com/in/itsubedibesh/",
+			},
+			{
+				isPopular: false,
+				title: "Twitter",
+				icon: "logos:twitter",
+				url: "https://twitter.com/iSubeDibesh",
+			},
+			{
+				isPopular: true,
+				title: "Github",
+				icon: "logos:github-icon",
+				url: "https://github.com/itSubeDibesh",
+			},
+		],
 	},
 };
 

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { HeroCard, SourceCode } from "../components/molecules";
+import { HeroCard, SocialLinks, SourceCode } from "../components/molecules";
 import { NavBar } from "../components/organisms";
 import { getHomepageData } from "../config";
 
@@ -10,7 +10,7 @@ export default function Home({ pageDetails }: any) {
 				<title>Dibesh Raj Subedi</title>
 				<meta
 					name="description"
-					content="A simple portfolio website with in-memory database"
+					content={`${pageDetails.heroCard.intro}\n${pageDetails.heroCard.summary}`}
 				/>
 				<meta
 					name="viewport"
@@ -25,7 +25,9 @@ export default function Home({ pageDetails }: any) {
 						<HeroCard {...pageDetails.heroCard} />
 					</div>
 					<div className="grid m-4 md:grid-cols-2 gap-4">
-						{/* <div><SocialLinks /></div> */}
+						<div>
+							<SocialLinks {...pageDetails.socialLinks} />
+						</div>
 						<div>
 							<SourceCode {...pageDetails.sourceCode} />
 						</div>
