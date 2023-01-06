@@ -125,3 +125,29 @@ export const getAllRepoId = async () => {
 		return [];
 	}
 };
+
+export type TBlogDetails = {
+	title: string;
+	summary: string;
+	publishedDate: string;
+	url: string;
+};
+
+export const blogDetails = (): TBlogDetails[] => {
+	return [
+		{
+			title: "Why do conditionals matter in ReactJs == vs ===?",
+			summary:
+				"At core of ReactJs conditionals play a significant role in determining the whole application's behaviour. But first, let's understand what...",
+			publishedDate: "Aug 26, 2022",
+			url: "https://medium.com/seriea-pub/why-do-conditionals-matter-in-reactjs-vs-e92525410e0f",
+		},
+		{
+			title: "Things to consider as a web developer",
+			summary:
+				"If you are willing to start your career as a web developer, you might be hustling with several blogs, articles, and videos. This article...",
+			publishedDate: "Jul 30, 2022",
+			url: "https://medium.com/seriea-pub/things-to-consider-as-a-web-developer-e43c0903ba7",
+		},
+	];
+};

@@ -1,46 +1,45 @@
 import { Icon } from "@iconify/react";
 import { Button, Card, Timeline } from "flowbite-react";
-import moment from "moment";
-import Link from "next/link";
-import { TAllRepos } from "../../../config";
+import { TBlogDetails } from "../../../config";
 
-interface IGitHubTimeline {
-	timeline: TAllRepos | null;
+interface IBlogs {
+	blogs: TBlogDetails[];
 }
 
-export const GitHubTimeline = ({ timeline }: IGitHubTimeline) => {
-	return timeline ? (
+export const MediumBlogs = ({ blogs }: IBlogs) => {
+	return blogs ? (
 		<>
 			<Card>
 				<h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
-					Public Repository
+					Blogs at medium
 				</h5>
 				<Timeline className="m-5 max-h-80 overflow-y-auto scrollbar-hide">
-					{timeline.map(({ id, created_at, name }) => {
+					{blogs.map(({ title, summary, url, publishedDate }) => {
 						return (
-							<Timeline.Item key={id}>
+							<Timeline.Item key={title}>
 								<Timeline.Point>
 									<span className="inline-flex">
 										<Icon icon="uim:calender" width={30} />
 										<Timeline.Time className="m-2">
-											{moment(created_at).format(
-												"dddd, MMMM Do YYYY, h:mm:ss a"
-											)}
+											{publishedDate}
 										</Timeline.Time>
 									</span>
 								</Timeline.Point>
 								<Timeline.Content>
 									<Timeline.Title className="inline-flex">
 										<Icon
-											icon="logos:github-icon"
+											icon="ant-design:medium-square-filled"
 											width={25}
 											className="mr-2"
 										/>
-										{name}
+										{title}
 									</Timeline.Title>
+									<Timeline.Body>{summary}</Timeline.Body>
 									<div className="inline-flex">
-										<Link
-											href={`/blogs/repository/${name}`}
+										<a
+											href={url}
+											target="_blank"
+											rel="noreferrer"
 										>
 											<Button
 												color="gray"
@@ -48,12 +47,12 @@ export const GitHubTimeline = ({ timeline }: IGitHubTimeline) => {
 											>
 												View Details
 												<Icon
-													icon="vscode-icons:folder-type-github-opened"
+													icon="ph:article-medium-bold"
 													className="ml-2"
 													width={20}
 												/>
 											</Button>
-										</Link>
+										</a>
 									</div>
 								</Timeline.Content>
 							</Timeline.Item>

@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { EEmoji } from "../../components/atoms";
-import { GitHubTimeline, RepoDetails } from "../../components/molecules";
+import { GitHubTimeline, MediumBlogs } from "../../components/molecules";
 import { NavBar } from "../../components/organisms";
-import { getAllRepositories } from "../../config";
+import { blogDetails, getAllRepositories } from "../../config";
 
-export default function Blogs({ timeline }: any) {
+export default function Blogs({ timeline, blogs }: any) {
 	return (
 		<>
 			<Head>
@@ -24,9 +24,9 @@ export default function Blogs({ timeline }: any) {
 					<NavBar activePage="blogs" emoji={EEmoji.MIND_BLOWING} />
 
 					<div className="grid m-4 md:grid-cols-2 gap-4">
-						{/* <div>
-							<GitHubTimeline />
-						</div> */}
+						<div>
+							<MediumBlogs blogs={blogs} />
+						</div>
 						<div>
 							<GitHubTimeline timeline={timeline} />
 						</div>
@@ -39,9 +39,11 @@ export default function Blogs({ timeline }: any) {
 
 export const getStaticProps = async () => {
 	const timeline = await getAllRepositories();
+	const blogs = blogDetails();
 	return {
 		props: {
 			timeline,
+			blogs,
 		},
 	};
 };
