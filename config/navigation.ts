@@ -4,10 +4,6 @@ export const navigationList = [
 		url: "/",
 	},
 	{
-		pageName: "about",
-		url: "/about",
-	},
-	{
 		pageName: "blogs",
 		url: "/blogs",
 	},

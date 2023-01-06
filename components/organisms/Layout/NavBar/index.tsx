@@ -6,12 +6,12 @@ import { EEmoji, Emoji } from "../../../atoms";
 import styles from "./navbar.module.css";
 
 interface INavBar {
-	activePage: "home" | "about" | "blogs";
+	activePage: "home" | "blogs" | "nan";
 	emoji?: EEmoji;
 }
 
 export const NavBar = ({
-	activePage = "home",
+	activePage = "nan",
 	emoji = EEmoji.HAPPY,
 }: INavBar) => {
 	return (
