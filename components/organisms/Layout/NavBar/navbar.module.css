@@ -1,0 +1,17 @@
+.active,
+.default {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.active {
+    color: #1A56DB;
+}
+
+.default {
+    color: #374151;
+}
+
+.default:hover {
+    color: #1648b8;
+}

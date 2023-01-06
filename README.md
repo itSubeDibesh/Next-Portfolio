@@ -1,4 +1,4 @@
-# Practice-Portfolio
+# Next-Portfolio
 
 ![NextJS Image](https://th.bing.com/th/id/R.b03ee6805e62ba683162c18710dc8611?rik=cQKrthcc2lzF4Q&pid=ImgRaw&r=0&sres=1&sresct=1)
 
@@ -10,7 +10,7 @@
 
 ## Table of Contents
 
-- [Practice-Portfolio](#practice-portfolio)
+- [Next-Portfolio](#next-portfolio)
   - [TechStack](#techstack)
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
