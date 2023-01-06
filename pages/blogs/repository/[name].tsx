@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { EEmoji } from "../../../components/atoms";
+import { RepoDetails } from "../../../components/molecules";
 import { NavBar } from "../../../components/organisms";
 import { getAllRepoId, repoDetailsByName } from "../../../config";
 
@@ -30,7 +31,9 @@ export default function RepositoryDetails({ repoDetails }: any) {
 			<main>
 				<div className="container">
 					<NavBar activePage="blogs" emoji={EEmoji.MIND_BLOWING} />
-					{JSON.stringify(repoDetails, null, 2)}
+					<div className="m-4 flex flex-col items-center">
+						<RepoDetails repoDetails={repoDetails} />
+					</div>
 				</div>
 			</main>
 		</>

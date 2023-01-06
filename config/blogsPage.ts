@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { backupDataset } from "./backup";
 
 const AllRepos = z
 	.object({
@@ -39,9 +40,10 @@ export type TRepoIncites = z.infer<typeof RepoIncites>;
 
 export const getAllRepositories = async (): Promise<TAllRepos | null> => {
 	try {
-		const githubAPI = await fetch(
-			`${process.env.GITHUB_API}/users/${process.env.GITHUB_USER}/repos`
-		).then((resp) => resp.json());
+		const githubAPI = backupDataset;
+		// const githubAPI = await fetch(
+		// 	`${process.env.GITHUB_API}/users/${process.env.GITHUB_USER}/repos`
+		// ).then((resp) => resp.json());
 		const newDataset = [
 			...githubAPI.map((items: any) => {
 				return {

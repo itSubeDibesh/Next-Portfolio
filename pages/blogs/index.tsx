@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { EEmoji } from "../../components/atoms";
-import { GitHubTimeline } from "../../components/molecules";
+import { GitHubTimeline, RepoDetails } from "../../components/molecules";
 import { NavBar } from "../../components/organisms";
 import { getAllRepositories } from "../../config";
 
@@ -22,6 +22,7 @@ export default function Blogs({ timeline }: any) {
 			<main>
 				<div className="container">
 					<NavBar activePage="blogs" emoji={EEmoji.MIND_BLOWING} />
+
 					<div className="grid m-4 md:grid-cols-2 gap-4">
 						{/* <div>
 							<GitHubTimeline />
