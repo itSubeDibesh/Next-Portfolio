@@ -49,9 +49,7 @@ export const getAllRepositories = async (): Promise<TAllRepos | null> => {
 				//  IP Restriction can occur
 				// console.log(
 				// 	"URL:",
-				// 	`${process.env.GITHUB_API}/users/${process.env.GITHUB_USER}/repos`,
-				// 	"DataSets:",
-				// 	{ data }
+				// 	`${process.env.GITHUB_API}/users/${process.env.GITHUB_USER}/repos`
 				// );
 				if (data.message) return [];
 				return data;
